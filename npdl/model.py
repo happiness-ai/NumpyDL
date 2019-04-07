@@ -35,10 +35,10 @@ class Model(object):
         self.layers[0].first_layer = True
 
         # connect to
-        next_layer = None
+        pre_layer = None
         for layer in self.layers:
-            layer.connect_to(next_layer)
-            next_layer = layer
+            layer.connect_to(pre_layer)
+            pre_layer = layer
         # for pre_layer, layer in zip(self.layers[:-1], self.layers[1:]):
         #     layer.connect_to(pre_layer)
 
